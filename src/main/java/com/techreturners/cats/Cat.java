@@ -1,5 +1,8 @@
 package com.techreturners.cats;
 
+import java.util.Random;
+import java.lang.Math;
+
 interface Cat {
     public boolean isAsleep();
 
@@ -40,7 +43,12 @@ class DomesticCat implements Cat {
     }
 
     public String eat() {
-        return "Purrrrrrr";
+        double randomIndex = Math.random();
+        if (randomIndex > 0.66) {
+            return "It will do I suppose";
+        } else {
+            return "Purrrrrrr";
+        }
     }
 
     public void wakeUp() {

@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import org.hamcrest.core.AnyOf;
+import org.hamcrest.core.Is;
+
 public class CatTest {
 
     @Test
@@ -69,6 +72,9 @@ public class CatTest {
 
     public void feedTheCat() {
         Cat domesticCat = new DomesticCat();
-        assertEquals("Purrrrrrr", domesticCat.eat());
+        // assertEquals("Purrrrrrr", domesticCat.eat());
+        String reaction = domesticCat.eat();
+        assertTrue(reaction.equals("Purrrrrrr") || reaction.equals("It will do I suppose"));
+
     }
 }
